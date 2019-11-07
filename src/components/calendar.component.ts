@@ -318,8 +318,10 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
         return date.valueOf();
       case 'object':
         return date.toObject();
+      
+      default:
+        return date;
     }
-    return date;
   }
 
   writeValue(obj: any): void {
