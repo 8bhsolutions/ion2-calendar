@@ -32,7 +32,7 @@ live demo [click me](https://hsuanxyz.github.io/demo/ion2-calendar/).
 
 # Usage
 ### Installation
-`$ npm install ion2-calendar moment --save`
+`$ npm install git+https://github.com/8bhsolutions/ion2-calendar.git#v2 moment --save`
 
 ### Compilation
 ```
