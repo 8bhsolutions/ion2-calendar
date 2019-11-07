@@ -35,8 +35,10 @@ live demo [click me](https://hsuanxyz.github.io/demo/ion2-calendar/).
 `$ npm install ion2-calendar moment --save`
 
 ### Compilation
-` $ npm install
- $ npm run build`
+```
+$ npm install
+$ npm run build
+```
 
 ### Import module
 
