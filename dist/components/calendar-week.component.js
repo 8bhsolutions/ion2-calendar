@@ -1,11 +1,4 @@
 "use strict";
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var config_1 = require("../config");
@@ -19,7 +12,7 @@ var CalendarWeekComponent = /** @class */ (function () {
     Object.defineProperty(CalendarWeekComponent.prototype, "weekArray", {
         set: function (value) {
             if (value && value.length === 7) {
-                this._weekArray = __spreadArrays(value);
+                this._weekArray = value.slice();
                 this.adjustSort();
             }
         },
@@ -38,12 +31,12 @@ var CalendarWeekComponent = /** @class */ (function () {
     });
     CalendarWeekComponent.prototype.adjustSort = function () {
         if (this._weekStart === 1) {
-            var cacheWeekArray = __spreadArrays(this._weekArray);
+            var cacheWeekArray = this._weekArray.slice();
             cacheWeekArray.push(cacheWeekArray.shift());
-            this._displayWeekArray = __spreadArrays(cacheWeekArray);
+            this._displayWeekArray = cacheWeekArray.slice();
         }
         else if (this._weekStart === 0) {
-            this._displayWeekArray = __spreadArrays(this._weekArray);
+            this._displayWeekArray = this._weekArray.slice();
         }
     };
     CalendarWeekComponent.decorators = [

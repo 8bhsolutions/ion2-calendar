@@ -105,7 +105,6 @@ var CalendarModal = /** @class */ (function () {
         }
     };
     CalendarModal.prototype.nextMonth = function (infiniteScroll) {
-        var _a;
         this.infiniteScroll = infiniteScroll;
         var len = this.calendarMonths.length;
         var final = this.calendarMonths[len - 1];
@@ -117,9 +116,9 @@ var CalendarModal = /** @class */ (function () {
         }
         (_a = this.calendarMonths).push.apply(_a, this.calSvc.createMonthsByPeriod(nextTime, 1, this._d));
         infiniteScroll.complete();
+        var _a;
     };
     CalendarModal.prototype.backwardsMonth = function () {
-        var _a;
         var first = this.calendarMonths[0];
         if (first.original.time <= 0) {
             this._d.canBackwardsSelected = false;
@@ -128,6 +127,7 @@ var CalendarModal = /** @class */ (function () {
         var firstTime = this.actualFirstTime = moment(first.original.time).subtract(1, 'M').valueOf();
         (_a = this.calendarMonths).unshift.apply(_a, this.calSvc.createMonthsByPeriod(firstTime, 1, this._d));
         this.ref.detectChanges();
+        var _a;
     };
     CalendarModal.prototype.scrollToDate = function (date) {
         var _this = this;

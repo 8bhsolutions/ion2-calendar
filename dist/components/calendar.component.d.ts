@@ -10,11 +10,9 @@ export declare class CalendarComponent implements ControlValueAccessor, OnInit {
     _view: 'month' | 'days';
     _calendarMonthValue: CalendarDay[];
     _showToggleButtons: boolean;
-    get showToggleButtons(): boolean;
-    set showToggleButtons(value: boolean);
+    showToggleButtons: boolean;
     _showMonthPicker: boolean;
-    get showMonthPicker(): boolean;
-    set showMonthPicker(value: boolean);
+    showMonthPicker: boolean;
     monthOpt: CalendarMonth;
     format: string;
     type: CalendarComponentTypeProperty;
@@ -24,8 +22,7 @@ export declare class CalendarComponent implements ControlValueAccessor, OnInit {
     onSelect: EventEmitter<CalendarDay>;
     onSelectStart: EventEmitter<CalendarDay>;
     onSelectEnd: EventEmitter<CalendarDay>;
-    set options(value: CalendarComponentOptions);
-    get options(): CalendarComponentOptions;
+    options: CalendarComponentOptions;
     constructor(calSvc: CalendarService);
     ngOnInit(): void;
     getViewDate(): CalendarComponentPayloadTypes;
@@ -46,7 +43,7 @@ export declare class CalendarComponent implements ControlValueAccessor, OnInit {
     _onTouched: Function;
     _payloadToTimeNumber(value: CalendarComponentPayloadTypes): number;
     _monthFormat(date: number): string;
-    private initOpt;
+    private initOpt();
     createMonth(date: number): CalendarMonth;
     _createCalendarDay(value: CalendarComponentPayloadTypes): CalendarDay;
     _handleType(value: number): CalendarComponentPayloadTypes;

@@ -18,7 +18,7 @@ export declare class MonthComponent implements ControlValueAccessor, AfterViewIn
     _isInit: boolean;
     _onChanged: Function;
     _onTouched: Function;
-    get _isRange(): boolean;
+    readonly _isRange: boolean;
     constructor(ref: ChangeDetectorRef);
     ngAfterViewInit(): void;
     writeValue(obj: any): void;

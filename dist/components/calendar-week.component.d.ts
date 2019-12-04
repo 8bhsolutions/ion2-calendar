@@ -4,7 +4,7 @@ export declare class CalendarWeekComponent {
     _weekStart: number;
     color: string;
     constructor();
-    set weekArray(value: string[]);
-    set weekStart(value: number);
+    weekArray: string[];
+    weekStart: number;
     adjustSort(): void;
 }
